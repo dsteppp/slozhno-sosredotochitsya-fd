@@ -15,7 +15,8 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
-  margin: 10px;
+  min-height: 100vh;
+  margin: 10px 10px -10px;
 }
 
 .decorated-zone::before {
@@ -32,7 +33,7 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 21px;
   left: 0;
   width: 25px;
   height: 25px;
@@ -66,7 +67,7 @@
   grid-column: 2;
   grid-row: 1;
   justify-self: end;
-  margin: 65px 0;
+  margin: 64px 0 65px;
 }
 
 .header__theme-menu-item:not(:last-child) {
@@ -114,6 +115,7 @@
 }
 
 .title-decor {
+  max-height: fit-content;
   color: var(--accent-text-color);
   background-color: var(--accent-color);
 }
@@ -122,7 +124,7 @@
   grid-column: 1 / 3;
   grid-row: 3;
   justify-self: end;
-  margin: 55px 0;
+  margin: 54px 0 75px;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -208,18 +210,27 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  margin: 50px 10px 10px;
+  min-height: 100vh;
+  margin: 40px 10px 0;
 }
 
 .footer__title {
-  padding: 276px 10px 275px;
+  padding: 286px 10px;
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer__decorated-zone::before {
+  top: 10px;
+}
+
+.footer__decorated-zone::after {
+  bottom: 11px;
 }
 
 @media (min-width: 765px) {
   .header {
     grid-template-columns: 1fr 1fr;
-    margin: 20px 20px;
+    margin: 20px 20px -20px;
   }
 
   .header__theme-menu {
@@ -238,7 +249,11 @@
 
   .header__description {
   grid-column: 2;
-  margin: 161px 0 163px;
+  margin: 161px 0 203px;
+  }
+
+  .decorated-zone::after {
+    bottom: 40px;
   }
 
   .content-section {
@@ -296,15 +311,27 @@
   }
 
   .footer {
-    margin: 80px 20px 20px;
+    margin: 60px 20px 0;
   }
 
   .footer__title {
     padding: 444px 0 440px;
   }
+
+  .footer__decorated-zone::before {
+    top: 20px;
+  }
+
+  .footer__decorated-zone::after {
+    bottom: 20px;
+  }
 }
 
 @media (min-width: 1020px) {
+  .header {
+    margin: 20px 20px -20px;
+  }
+
   .header__theme-menu {
     grid-column: 1 / 3;
     grid-row: 1;
@@ -319,7 +346,11 @@
   }
 
   .header__description {
-  margin: 113px 0 115px;
+  margin: 113px 0 155px;
+  }
+
+  .decorated-zone::after {
+    bottom: 40px;
   }
 
   .content-section__content {
@@ -338,6 +369,10 @@
   }
 
   .footer__title {
-    padding: 299px 0 299px;
+    padding: 299px 0;
+  }
+
+  .footer__decorated-zone::after {
+    bottom: 20px;
   }
 }
