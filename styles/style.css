@@ -85,13 +85,14 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
   outline: 1px solid var(--btn-hover-outline);
 }
 
-.header__theme-menu-button:focus:not(.header__theme-menu-button_active) {
+.header__theme-menu-button:focus-visible:not(.header__theme-menu-button_active) {
   border-bottom: 1px solid var(--accent-color);
   outline: none;
 }
@@ -180,7 +181,7 @@
   pointer-events: none;
 }
 
-.content-section__content-text_link:focus {
+.content-section__content-text_link:focus-visible {
   outline: 1px solid var(--text-color);
 }
 
