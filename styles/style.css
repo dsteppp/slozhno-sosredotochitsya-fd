@@ -69,7 +69,7 @@
   grid-column: 2;
   grid-row: 1;
   justify-self: end;
-  margin: 74px 0 64px; 
+  margin: 74px 0 64px;
 }
 
 .header__theme-menu-item:not(:last-child) {
