@@ -34,8 +34,9 @@
     --bg-color: #fff1f7;
     --text-color: #353430;
   }
-
-  .header__decor {
+  
+  .theme-light .header__decor,
+  .theme-auto .header__decor {
     display: none;
-  }
+  }  
 }
